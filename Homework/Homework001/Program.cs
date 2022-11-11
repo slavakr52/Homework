@@ -18,6 +18,7 @@ Console.WriteLine($"Большее число - {MAX}, меньшее число
 
 // Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел
 
+/*
 Console.WriteLine("Введите первое число:");
 int N1 = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите второе число:");
@@ -31,3 +32,28 @@ if (N2 > MAX) MAX = N2;
 if (N3 > MAX) MAX = N3;
 
 Console.WriteLine($"Максимальное число - {MAX}");
+*/
+
+// Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка)
+
+/*
+Console.WriteLine("Введите число:");
+int N1 = int.Parse(Console.ReadLine()!);
+if (N1%2==0) Console.WriteLine($"Число {N1} является чётным");
+else Console.WriteLine($"Число {N1} является нечётным");
+*/
+
+//Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N
+
+/*
+Console.WriteLine("Введите число:");
+int N = int.Parse(Console.ReadLine()!);
+int X = 2;
+
+Console.Write($"Все чётные числа от 1 до {N}: ");
+while (X <= N)
+{
+    Console.Write($"{X} ");
+    X+=2;
+}
+*/
