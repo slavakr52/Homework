@@ -11,17 +11,16 @@ list_length = int(input('Введите размер списка: '))
 for _ in range(list_length):
     list.append(rnd(1,100))
 
-count = 0    
-near_element = 0
+count = 0   
 search_number = int(input('Введите искомое число в диапазоне 0-100: '))
 for i in range(list_length):
     if search_number == list[i]:
         count+=1
-        near_element = list[i]    # если такое число есть, ближайшее можно не искать 
 print()
 print(f'Число {search_number} встречается в сгенерированном списке {count} раз')
 
 if count == 0:         # а тут уже если ни одного совпадения нет, сверяемся с счётчиком
+    near_element = 0
     a = search_number
     b = search_number
     for i in range(100):
