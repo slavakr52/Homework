@@ -6,30 +6,30 @@
 
 from random import randint as rnd
 
-list = list()
+list = list()  # создаём список
 list_length = int(input('Введите размер списка: '))
 for _ in range(list_length):
     list.append(rnd(1,100))
 
-count = 0
+count = 0    
 near_element = 0
 search_number = int(input('Введите искомое число в диапазоне 0-100: '))
 for i in range(list_length):
     if search_number == list[i]:
         count+=1
-        near_element = list[i]
+        near_element = list[i]    # если такое число есть, ближайшее можно не искать 
 print()
 print(f'Число {search_number} встречается в сгенерированном списке {count} раз')
 
-if count == 0:
+if count == 0:         # а тут уже если ни одного совпадения нет, сверяемся с счётчиком
     a = search_number
     b = search_number
     for i in range(100):
         for j in range(list_length):
-            if a == list[j] or b == list[j]:
+            if a == list[j] or b == list[j]:      # шагаем в обе стороны от нашего числа
                 near_element = list[j]
                 break
-        if near_element !=0:
+        if near_element !=0:     # если число уже найдено, значит оно ближайшее, тормозим
             break
         else:
             a-=1

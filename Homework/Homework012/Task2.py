@@ -22,21 +22,22 @@
 
 
 dict = dict()
-dict['1'] = 'AEIOULNSTR'
-dict['2'] = 'D', 'G', 'Д', 'К', 'Л', 'М', 'П', 'У'
-dict['3'] = 'B', 'C', 'M', 'P', 'Б', 'Г', 'Ё', 'Ь', 'Я'
-dict['4'] = 'F', 'H', 'V', 'W', 'Y', 'Й', 'Ы'
-dict['5'] = 'J', 'X', 'Ж', 'З', 'Х', 'Ц', 'Ч'
-dict['8'] = 'Q', 'Z', 'Ш', 'Э', 'Ю'
-dict['10'] = 'D', 'G', 'Ф', 'Щ', 'Ъ'
+dict['1'] = 'AEIOULNSTRАВЕИНОРСТaeioulnstrавеинорст'
+dict['2'] = 'DGДКЛМПУdgдклмпу'
+dict['3'] = 'BCMPБГЁЬЯbcmpбгёья'
+dict['4'] = 'FHVWYЙЫfhvwyйы'
+dict['5'] = 'KЖЗХЦЧkжзхцч'
+dict['8'] = 'JXШЭЮjxшэю'
+dict['10'] = 'QZФЩЪqzфщъ'
+
+word = input('Введите английское или русское слово: ')
+points = 0
+
+for key, value in dict.items():
+    for i in range(len(word)):
+        if word[i] in value:
+            points += int(key)
+print(f'Данное слово набрало {points} очков')
+    
 
 
-
-
-
-
-
-
-
-
-print(dict['1'][1])

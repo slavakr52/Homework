@@ -3,8 +3,10 @@
 
 Console.WriteLine();
 Console.WriteLine("Введите количество строк массива, затем количество столбцов массива: ");
-int rows2 = int.Parse(Console.ReadLine()!);
-int columns2 = int.Parse(Console.ReadLine()!);
+var a = Console.ReadLine()!;
+int rows2 = int.Parse(a);
+var b = Console.ReadLine()!;
+int columns2 = int.Parse(b); 
 Console.WriteLine("Массив:");
 int[,] ArrayMain = CreateRandomArray(rows2, columns2);
 PrintArray(ArrayMain);
