@@ -21,8 +21,7 @@ print(f'Число {search_number} встречается в сгенериро�
 
 if count == 0:         # а тут уже если ни одного совпадения нет, сверяемся с счётчиком
     near_element = 0
-    a = search_number
-    b = search_number
+    a = b = search_number
     for i in range(100):
         for j in range(list_length):
             if a == list[j] or b == list[j]:      # шагаем в обе стороны от нашего числа
