@@ -11,3 +11,23 @@
 # Напишите программу для нахождения максимального числа ягод, которое
 # может собрать за один заход собирающий модуль, находясь перед некоторым
 # кустом заданной во входном файле грядки.
+
+from random import randint as rnd
+
+garden_bed_size = int(input('Введите кол-во кустов на грядке: '))
+
+garden_bed = []
+for _ in range(garden_bed_size):
+    garden_bed.append(rnd(1,20))
+print(f'Ягод на каждом кусте: {garden_bed}')
+
+berry_max_count = 0   # считываемые элементы у нас будут на месте, а вот список будем щёлкать
+for i in range(garden_bed_size):
+    if garden_bed[0] + garden_bed[1] + garden_bed[2] > berry_max_count:
+        berry_max_count = garden_bed[0] + garden_bed[1] + garden_bed[2]
+    
+    garden_bed.insert(0, garden_bed[len(garden_bed)-1])
+    garden_bed.pop(len(garden_bed)-1)
+
+print(f'С этой грядки модуль за один заход соберёт максимум {berry_max_count} ягод')
+
