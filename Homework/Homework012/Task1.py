@@ -10,7 +10,7 @@ list = list()  # создаём список
 list_length = int(input('Введите размер списка: '))
 for _ in range(list_length):
     list.append(rnd(1,100))
-
+    
 count = 0   
 search_number = int(input('Введите искомое число в диапазоне 0-100: '))
 for i in range(list_length):
