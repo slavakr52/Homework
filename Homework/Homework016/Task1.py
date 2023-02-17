@@ -19,7 +19,7 @@ def vinny_control(vinny_string: str):
     
     control_list = []                                    
     for i in vinny_list:                       # это как вышло первоначально без сахара
-        control_list.append(letters_count(i))  # дальше пробуем сокращать
+        control_list.append(letters_count(i))  # дальше пробуем сокращать (ниже)
 
     if all (i == control_list[0] for i in control_list):
         print('Парам пам-пам')
