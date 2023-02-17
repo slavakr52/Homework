@@ -33,9 +33,9 @@ oper_2 = lambda x, y: x * y
 
 def print_operation_table(operation, num_rows=9, num_columns=9):
     if table_number == 1:
-        for i in range(num_columns + 1):
+        for i in range(num_columns):
             list = []
-            for j in range (num_rows + 1):       
+            for j in range (num_rows):       
                 list.append(str(operation(i, j)))   
             print('\t'.join(list))
     if table_number == 2: 
