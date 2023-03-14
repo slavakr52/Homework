@@ -11,6 +11,7 @@ import java.util.Scanner;
  * в списке, а первая - последней.
  * - Если введено revert, удаляет предыдущую введенную строку из памяти.
  */
+
 public class Task1 {
 
     public static void main(String[] args) {
@@ -25,41 +26,62 @@ public class Task1 {
 
             switch (userInput) {
                 case "print":
-                    System.out.println("case");
-                    flag = false;
+                    if (userList.size() != 0) {
+                        System.out.println(userList);
+                    } else {
+                        System.out.println("\nList is empty");
+                    }
+                    System.out.println("(press Enter to continue)");
+                    input.nextLine();
+                    break;
 
-                default:
-                    System.out.println("def");
+                case "revert":
+                    if (userList.size() != 0) {
+                        userList.removeFirst();
+                        System.out.println("\nLast added string removed");
+                    } else {
+                        System.out.println("\nList is empty");
+                    }
+                    System.out.println("(press Enter to continue)");
+                    input.nextLine();
+                    break;
+
+                case "add":
+                    userList.add(0, userAddString(input));
+                    System.out.println("\nLine added"
+                            + "\n(press Enter to continue)");
+                    input.nextLine();
+                    break;
+
+                case "exit":
+                    flag = false;
                     break;
             }
         }
         input.close();
     }
 
-    private static String userInput(Scanner input) {
-
+    private static String userAddString(Scanner input) {
         String text;
-        System.out.println("\nYou may add a line or enter action"
-                + "\nAvailable actions:\nprint\nrevert\nexit"
-                + "\nEnter text or action: ");
+        System.out.println("Enter new string: ");
         if (input.hasNextLine()) {
             text = input.nextLine();
         } else {
             text = "error";
         }
-        // 
+        return text;
+    }
 
+    private static String userInput(Scanner input) {
+        String text;
+        System.out.println("\nYou may add a line or enter action"
+                + "\nAvailable actions:\n\tadd\n\tprint\n\trevert\n\texit"
+                + "\nEnter action: ");
+        if (input.hasNextLine()) {
+            text = input.nextLine();
+        } else {
+            text = "error";
+        }
         return text.toLowerCase();
     }
 }
-
-/*
- * public String scan(Scanner s) {
- * String input;
- * if (s.hasNextLine()) {
- * input = s.nextLine();
- * } else {
- * input = "ERROR";
- * }
- * return input.toLowerCase();
- */
