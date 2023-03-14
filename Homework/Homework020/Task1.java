@@ -24,7 +24,9 @@ public class Task1 {
     private static String userInput() {
 
         Scanner input = new Scanner(System.in);
-        System.out.println("\nYou may add a line or enter action\nAvailable actions:\nprint\nrevert\nexit\nEnter text or action: ");
+        System.out.println("\nYou may add a line or enter action"
+                + "\nAvailable actions:\nprint\nrevert\nexit"
+                + "\nEnter text or action: ");
         String text = input.nextLine();
         input.close();
 
