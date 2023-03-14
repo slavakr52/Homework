@@ -16,9 +16,22 @@ public class Task1 {
     public static void main(String[] args) {
 
         LinkedList<String> userList = new LinkedList<>();
-        userList.add(userInput());
+        boolean flag = true;
 
-        System.out.println(userList);
+        while (flag == true) {
+        
+            String userInput = userInput();
+
+            switch (userInput) {
+                case "print":
+                    System.out.println("case");
+                    break;
+
+                default:
+                System.out.println("def");
+                break;
+            }
+        }
     }
 
     private static String userInput() {
@@ -30,7 +43,6 @@ public class Task1 {
         String text = input.nextLine();
         input.close();
 
-        return text;
+        return text.toLowerCase();
     }
-
 }
