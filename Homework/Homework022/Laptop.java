@@ -1,7 +1,13 @@
 package Homework022;
 
 /**
- * Task1
+ * 1. Подумать над структурой класса Ноутбук для магазина техники - выделить поля и
+ * методы. Реализовать в java.
+ * 2. Создать множество ноутбуков (ArrayList).
+ * 3. Отфильтровать ноутбуки их первоначального множества и вывести проходящие по
+ * условиям. Например, спросить у пользователя минимальный размер оперативной
+ * памяти или конкретный цвет. Выводить только те ноутбуки, что соответствуют
+ * условию
  */
 public class Laptop {
 
@@ -28,11 +34,15 @@ public class Laptop {
     }
 
     public void showInfo() {
-        System.out.println("Brand: " + brand
+        System.out.println("\nBrand: " + brand
                 + "\nModel: " + model
                 + "\nScreen size: " + diagonal + "inch"
                 + "\nRAM: " + ram + " GB"
                 + "\nMemory (SSD): " + ssd + " GB");
+    }
+
+    public void showBrandAndModel() {
+        System.out.println(brand + " " + model);
     }
 
     public String getBrand() {

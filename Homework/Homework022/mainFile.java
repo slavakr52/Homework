@@ -2,10 +2,9 @@ package Homework022;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-import Homework022.Laptop;
-public class mainFile
- {
+public class mainFile {
     public static void main(String[] args) {
 
         Laptop laptop1 = new Laptop("Lenovo", "A300", "13", "8", "256", "46500");
@@ -31,11 +30,27 @@ public class mainFile
         laptopList.add(laptop9);
         laptopList.add(laptop10);
 
-        laptop6.showInfo();
-        laptopList.get(7).showInfo();
-        
+        System.out.println("Available laptops:\n");
+        for (int i = 0; i < laptopList.size(); i++) {
+            laptopList.get(i).showBrandAndModel();
+        }
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nEnter the minimum amount of SSD: ");
+        Integer userInput = input.nextInt();
+        input.close();
 
-        
+        int check = 0;
+        for (int i = 0; i < laptopList.size(); i++) {
+            Integer memory = Integer.parseInt(laptopList.get(i).getSsd());
+            if (memory >= userInput){
+                laptopList.get(i).showInfo();
+                check++;
+            }
+        }
+        if (check == 0){
+            System.out.println("\nNo results found");
+        }
+
     }
 }
