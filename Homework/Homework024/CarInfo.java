@@ -1,6 +1,6 @@
 package Homework.Homework024;
 
-public abstract class CarInfo implements AllInfo {
+public abstract class CarInfo implements I_AllInfo {
 
     int horsePower;
     double engineCapacity;
