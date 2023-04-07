@@ -1,5 +1,7 @@
 package Homework.Homework024;
-
+/*
+ * Данный абстрактный класс описывает основные характеристики автомобиля
+ */
 public abstract class CarInfo implements I_AllInfo {
 
     int horsePower;
@@ -29,50 +31,50 @@ public abstract class CarInfo implements I_AllInfo {
     }
 
     @Override
-    public void getEngineCapacity() {
-        System.out.println(engineCapacity);
+    public double getEngineCapacity() {
+        return engineCapacity;
 
     }
 
     @Override
-    public void getEngineNumber() {
-        System.out.println(engineNumber);
+    public int getEngineNumber() {
+        return engineNumber;
 
     }
 
     @Override
-    public void getHorsePower() {
-        System.out.println(horsePower);
+    public int getHorsePower() {
+        return horsePower;
 
     }
 
     @Override
-    public void getBrakeType() {
-        System.out.println(brakeType);
+    public String getBrakeType() {
+        return brakeType;
 
     }
 
     @Override
-    public void getDriveType() {
-        System.out.println(driveType);
+    public String getDriveType() {
+        return driveType;
 
     }
 
     @Override
-    public void getBodyType() {
-        System.out.println(bodyType);
+    public String getBodyType() {
+        return bodyType;
 
     }
 
     @Override
-    public void getInteriorColor() {
-        System.out.println(interiorColor);
+    public String getInteriorColor() {
+        return interiorColor;
 
     }
 
     @Override
-    public void getSteeringWheelSide() {
-        System.out.println(steeringWheelSide);
+    public String getSteeringWheelSide() {
+        return steeringWheelSide;
 
     }
 

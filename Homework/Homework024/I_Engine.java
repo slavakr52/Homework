@@ -4,10 +4,10 @@ package Homework.Homework024;
  */
 public interface I_Engine {
 
-    void getHorsePower(); // мощность двигателя, л.с.
+    int getHorsePower(); // мощность двигателя, л.с.
 
-    void getEngineCapacity(); // объем двигателя
+    double getEngineCapacity(); // объем двигателя
 
-    void getEngineNumber(); // номер двигателя
+    int getEngineNumber(); // номер двигателя
 
 }

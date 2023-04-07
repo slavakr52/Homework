@@ -4,7 +4,7 @@ package Homework.Homework024;
  */
 public interface I_Chassis {
 
-    void getDriveType(); // тип привода (передний, задний, полный)
+    String getDriveType(); // тип привода (передний, задний, полный)
 
-    void getBrakeType(); // тип тормозной системы (дисковая, барабанная)
+    String getBrakeType(); // тип тормозной системы (дисковая, барабанная)
 }

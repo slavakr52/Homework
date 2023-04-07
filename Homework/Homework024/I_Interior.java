@@ -4,7 +4,7 @@ package Homework.Homework024;
  */
 public interface I_Interior {
 
-    void getInteriorColor(); // цвет салона
+    String getInteriorColor(); // цвет салона
 
-    void getSteeringWheelSide(); // сторона рулевого колеса
+    String getSteeringWheelSide(); // сторона рулевого колеса
 }

@@ -5,6 +5,6 @@ package Homework.Homework024;
 
 public interface I_Body {
 
-    void getBodyType(); // тип кузова (седан, хетчбэк, ...)
+    String getBodyType(); // тип кузова (седан, хетчбэк, ...)
 
 }
