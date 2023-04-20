@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 class Movement(ABC):
 
     @abstractmethod
-    def moveForward(self):
+    def moveForward():
         pass
 
     @abstractmethod
@@ -17,10 +17,10 @@ class Vehicle(Movement):
         self.name = name
 
     def moveForward(self):
-        print(self.name + " move forward...")
+        return (self.name + " move forward...")
 
     def moveBack(self):
-        print(self.name + " move back...")
+        return (self.name + " move back...")
 
 class Car(Vehicle):
     def __init__(self, name) -> str:
@@ -33,7 +33,7 @@ class Car(Vehicle):
         return super().moveBack()
     
     def startEngine(self):
-        print(self.name + " start engine...")
+        return (self.name + " start engine...")
     
 
 
