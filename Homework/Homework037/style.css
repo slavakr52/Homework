@@ -18,7 +18,7 @@ body {
 
 .header_link {
   color: #fff;
-  font-family: Open Sans;
+  font-family: sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -40,8 +40,10 @@ body {
   justify-content: center;
 }
 
-.main {
-    margin-bottom: 197px;
+.main .container {
+  margin-bottom: 197px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main_left,
@@ -52,7 +54,7 @@ body {
 .main_subtitle {
   margin-bottom: 10px;
   color: #3a68b8;
-  font-family: Open Sans;
+  font-family: sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -63,7 +65,7 @@ body {
 .main_title {
   margin-bottom: 40px;
   color: #fff;
-  font-family: Open Sans;
+  font-family: sans-serif;
   font-size: 55px;
   font-style: normal;
   font-weight: 800;
@@ -73,7 +75,7 @@ body {
 .main_text {
   margin-bottom: 50px;
   color: #fff;
-  font-family: Open Sans;
+  font-family: sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -87,19 +89,67 @@ body {
   background: #3a68b8;
   padding: 1rem 2rem;
   color: #fff;
-  font-family: Open Sans;
+  font-family: sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 
-.main_flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo_flex {
+.logo .container {
+  margin-bottom: 157px;
   display: flex;
   justify-content: space-around;
+}
+
+.content .container {
+  margin-bottom: 264px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content_left,
+.content_right {
+  width: 47%;
+}
+
+.content_left {
+  margin-right: 68px;
+}
+
+.content_title {
+  margin-bottom: 30px;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.content_text {
+  margin-bottom: 50px;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  opacity: 0.7;
+}
+
+.content_button {
+  display: inline-flex;
+  padding: 15px 30px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 5px;
+  background: #3a68b8;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
