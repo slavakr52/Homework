@@ -103,7 +103,6 @@ body {
 }
 
 .content .container {
-  margin-bottom: 264px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,6 +111,7 @@ body {
 .content_left,
 .content_right {
   width: 47%;
+  margin-bottom: 264px;
 }
 
 .content_left {
